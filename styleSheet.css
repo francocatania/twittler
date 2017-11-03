@@ -1,0 +1,46 @@
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*#myHeader {
+	width:100%;
+    top:0px;
+    height:100px;
+    background:#000000;
+    margin: auto;
+}*/
+
+#headerTitle {
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 30px;
+	color: white;
+}
+
+.twitterFeed {
+	margin-top: 10px;
+}
+
+.tweet {
+	margin: 15px;
+	padding: 15px
+}
+
+#imageAndText {
+	padding: 16px;
+}
+
+#userPicture {
+
+
+}
+
+#loadMoreButton {
+	margin-left: 60px;
+}
+
+.card-text {
+	margin-top: 20px;
+}

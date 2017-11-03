@@ -3,25 +3,35 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="application.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
+  
   <body>
-    <script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+  <!-- HEADER -->
+     <nav class="navbar navbar-inverse" id="myNavbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" id="headerTitle">Twister</a>
+        </div>
+      <button class="btn btn-danger navbar-btn" id="loadMoreButton">Load more Twists !</button>
+      </div>
+    </nav>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+  <!-- TWEETS FEED -->
+    <div class="twitterFeed"></div> 
 
-      });
-
-    </script>
   </body>
 </html>
