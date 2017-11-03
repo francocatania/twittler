@@ -19,12 +19,8 @@ body {
 	color: white;
 }
 
-.twitterFeed {
-	margin-top: 10px;
-}
-
 .tweet {
-	margin: 15px;
+	margin: 0px 15px 15px 15px;
 	padding: 15px
 }
 

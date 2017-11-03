@@ -8,7 +8,7 @@ $(document).ready(function(){
   while(index >= 0){
     var tweet = streams.home[index];
 
-    var $tweet = $('<div class="w3-card-4 tweet" style="width:55%">'
+    var $tweet = $('<div class="w3-card-4 tweet" style="width:100%">'
                     +'<img src="https://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" id="userPicture" style="width:60px">'
                     +'<div class="card">'
                       +'<div class="card-block">'
@@ -28,7 +28,7 @@ $(document).ready(function(){
     for (var i = currentTweetIndex; i < currentTweetIndex + 5; i++) {
       if (streams.home[i]) {
         var tweet = streams.home[i];
-        var $tweet = $('<div class="w3-card-4 tweet" style="width:55%">'
+        var $tweet = $('<div class="w3-card-4 tweet" style="width:100%">'
                         +'<img src="https://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" id="userPicture" style="width:60px">'
                         +'<div class="card">'
                           +'<div class="card-block">'
@@ -44,6 +44,8 @@ $(document).ready(function(){
     currentTweetIndex += 5 
   });
 
+  // ANIMATION
+
   $('body').on('mouseenter', '.tweet', function(event) {
     event.preventDefault();
     $(this).animate({'margin-left' : '+30px'}, 'fast');
@@ -52,6 +54,13 @@ $(document).ready(function(){
   $('body').on('mouseleave', '.tweet', function(event) {
     event.preventDefault();
     $(this).animate({'margin-left' : '15px'}, 'fast');
+  });
+
+  // SHOW USER TWEETS
+
+  $('body').on('click', '.tweet', function() {
+    //event.preventDefault();
+    $('.userFeed').show();
   });
 
 });
@@ -65,22 +74,4 @@ var publishedDate = function(tweet) {
   return 'Published ' + month +'/' + date + ' at ' + hour + ':' + mins + ' hs.'
 }
 
-// $('#loadMoreButton').on('click', function() {
-//   var newTweetIndex = 11;
-//   for (var i = currentTweetIndex; i < currentTweetIndex + 5, i++) {
-//     var tweet = streams.home[i];
-
-//     var $tweet = $('<div class="w3-card-4 tweet" style="width:55%">'
-//                     +'<img src="https://www.w3schools.com/w3css/img_avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" id="userPicture" style="width:60px">'
-//                     +'<div class="card">'
-//                       +'<div class="card-block">'
-//                       +'<h4 class="card-title">@' + tweet.user + '</h4>'
-//                       +'<h6 class="card-subtitle mb-2 text-muted">' + publishedDate(tweet) + '</h6>'
-//                       +'<p class="card-text">' + tweet.message + '</p>'
-//                     +'</div>'
-//                   +'</div>'
-//                 +'</div>')
-//     $tweet.appendTo($feed);
-//   }
-// });
 
