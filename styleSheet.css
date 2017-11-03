@@ -1,17 +1,7 @@
-
-
 body {
 	margin: 0px;
 	padding: 0px;
 }
-
-/*#myHeader {
-	width:100%;
-    top:0px;
-    height:100px;
-    background:#000000;
-    margin: auto;
-}*/
 
 #headerTitle {
 	font-family: 'Shadows Into Light Two', cursive;
@@ -20,6 +10,11 @@ body {
 }
 
 .tweet {
+	margin: 0px 15px 15px 15px;
+	padding: 15px
+}
+
+.userTweet {
 	margin: 0px 15px 15px 15px;
 	padding: 15px
 }
@@ -39,4 +34,8 @@ body {
 
 .card-text {
 	margin-top: 20px;
+}
+
+#seeMoreFrom {
+	margin-top: 0px;
 }
